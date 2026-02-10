@@ -8,11 +8,19 @@ public class Main {
         System.out.println("Distance Converter Project v1.0");
 
         double mls = 10;
+        double kms = 25;
+
         double kilometers = convMilesToKms(mls);
-        System.out.println("Result is " + kilometers + " kilometers.");
+        double miles = convKmsToMiles(kms);
+
+        System.out.println("Result is " + kilometers + " kilometers and " + miles + " miles.");
     }
 
     private static double convMilesToKms(double mls) {
         return mls * CONV_K;
+    }
+
+    private static double convKmsToMiles(double kms) {
+        return kms / CONV_K;
     }
 }
